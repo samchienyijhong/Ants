@@ -377,7 +377,7 @@ def run(*args):
     else:
         print("Could not start webserver: all ports in range 8080-8199 are taken")
         sys.exit(1)
-    print("Web Server started @ 0.0.0.0:" + str(PORT))
+    print("Web Server started with port:" + str(PORT))
 
     def start_http():
         while gui.active:
