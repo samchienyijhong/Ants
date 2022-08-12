@@ -377,7 +377,7 @@ def run(*args):
     else:
         print("Could not start webserver: all ports in range 8080-8199 are taken")
         sys.exit(1)
-    print("Web Server started @ localhost:" + str(PORT))
+    print("Web Server started @ 0.0.0.0:" + str(PORT))
 
     def start_http():
         while gui.active:
@@ -386,7 +386,7 @@ def run(*args):
 
     threading.Thread(target=start_http).start()
     try:
-        webbrowser.open("http://localhost:" + str(PORT) + '/gui.html', 2)
+        webbrowser.open("http://0.0.0.0:" + str(PORT) + '/gui.html', 2)
     except Exception:
         print("Unable to automatically open web browser.")
-        print("Point your browser to http://localhost:" + str(PORT) + '/gui.html')
+        print("Point your browser to http://0.0.0.0:" + str(PORT) + '/gui.html')
