@@ -98,7 +98,7 @@ class GUI:
         self.initialized = True
 
     def get_ant_types(self, noSave=False):
-        ant_types = [];
+        ant_types = []
         for name, ant_type in self.gamestate.ant_types.items():
             ant_types.append({"name": name, "cost": ant_type.food_cost, "img": self.get_insect_img_file(name)})
 
